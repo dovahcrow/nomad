@@ -17,9 +17,9 @@ NOMAD_DATA_DIR=${NOMAD_DATA_DIR:-"/nomad/data"}
 NOMAD_CONFIG_DIR=${NOMAD_CONFIG_DIR:-"/etc/nomad"}
 
 # You can also set the NOMAD_LOCAL_CONFIG environemnt variable to pass some
-# Nomad configuration JSON without having to bind any volumes.
+# Nomad configuration hcl without having to bind any volumes.
 if [ -n "$NOMAD_LOCAL_CONFIG" ]; then
-	echo "$NOMAD_LOCAL_CONFIG" > "$NOMAD_CONFIG_DIR/local.json"
+	echo "$NOMAD_LOCAL_CONFIG" > "$NOMAD_CONFIG_DIR/local.hcl"
 fi
 
 # If the user is trying to run Nomad directly with some arguments, then
