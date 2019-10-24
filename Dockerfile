@@ -28,7 +28,7 @@ RUN set -x && \
   gosu nobody true && \
   apk del .gosu-deps
 
-ENV NOMAD_VERSION 0.9.6
+ENV NOMAD_VERSION 0.10.0
 
 RUN set -x \
   && apk --update add --no-cache --virtual .nomad-deps gnupg curl \
